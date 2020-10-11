@@ -1,8 +1,6 @@
 # Match Game
 
-## How To Run
-
-Install:
+## Prerequisites to Install
 
 * [Python 3.8](https://www.python.org/downloads/)
 * [Django 3.1](https://www.djangoproject.com/download/)
