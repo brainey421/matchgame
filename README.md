@@ -11,5 +11,5 @@ Install:
 
 ## References
 
-* [Django Tutorial (Polls)](https://docs.djangoproject.com/en/3.1/intro/tutorial01/)
+* [Django Tutorial (Polls App)](https://docs.djangoproject.com/en/3.1/intro/tutorial01/)
 * [Channels Tutorial (Chat Server)](https://channels.readthedocs.io/en/latest/tutorial/part_1.html)
