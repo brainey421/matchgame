@@ -9,8 +9,6 @@ Install:
 * [Channels 2.4](https://channels.readthedocs.io/en/latest/installation.html)
 * [Docker](https://www.docker.com/get-started)
 
-        $ python3 manage.py runserver
-
 ## References
 
 * [Django Tutorial (Polls)](https://docs.djangoproject.com/en/3.1/intro/tutorial01/)
