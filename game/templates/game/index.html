@@ -2,6 +2,9 @@
 <html>
 <head>
     <title>Match Game</title>
+	
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'game/styles/style.css' %}" />
 </head>
 <body>
     <p>Hello, world!</p>
@@ -10,7 +13,7 @@
 		{% csrf_token %}
 		<label for="inputPartyID">Party ID:</label>
 		<input type="text" name="inputPartyID" />
-		<input type="submit" value="Go">
+		<input type="submit" value="Go" />
 	</form>
 </body>
 </html>
