@@ -8,8 +8,8 @@
 	
 	<form action="{% url 'game:lobby' %}" method="POST">
 		{% csrf_token %}
-		<label for="inputLobby">Lobby:</label>
-		<input type="text" name="inputLobby" />
+		<label for="inputPartyID">Party ID:</label>
+		<input type="text" name="inputPartyID" />
 		<input type="submit" value="Go">
 	</form>
 </body>
