@@ -5,5 +5,31 @@
 </head>
 <body>
     <p>Welcome to lobby {{ party_id }}!</p>
+	<p>Clicks: <span id="spanNumClicks"></span></p>
+	<input type="button" id="btnClickMe" value="Click me">
+	
+	{{ party_id|json_script:"partyID" }}
+	<script>
+		// TODO Move scripts to their own location
+		
+		const partyID = JSON.parse(document.getElementById('partyID').textContent);
+		
+		const lobbySocket = new WebSocket(
+			'ws://'
+			+ window.location.host
+			+ '/ws/lobby/'
+			+ partyID
+			+ '/'
+		);
+		
+		lobbySocket.onmessage = function(e) {
+			spanNumPeople = document.getElementById('spanNumClicks');
+			spanNumClicks.textContent = spanNumClicks.textContent + 'Click ';
+		}
+		
+		document.getElementById('btnClickMe').onclick = function(e) {
+			lobbySocket.send('');
+		}
+	</script>
 </body>
 </html>
