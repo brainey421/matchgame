@@ -14,3 +14,6 @@ class Party(models.Model):
 class Person(models.Model):
     name = models.CharField(max_length=32)
     party = models.ForeignKey(Party, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.name
