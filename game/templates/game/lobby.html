@@ -5,7 +5,7 @@
 </head>
 <body>
     <p>Welcome to lobby {{ party_id }}!</p>
-	<p>Clicks: <span id="spanNumClicks"></span></p>
+	<p>Clicks: <span id="spanNumClicks" /></p>
 	<input type="button" id="btnClickMe" value="Click me">
 	
 	{{ party_id|json_script:"partyID" }}
@@ -22,13 +22,13 @@
 			+ '/'
 		);
 		
+		document.getElementById('btnClickMe').onclick = function(e) {
+			lobbySocket.send('');
+		}
+		
 		lobbySocket.onmessage = function(e) {
 			spanNumPeople = document.getElementById('spanNumClicks');
 			spanNumClicks.textContent = spanNumClicks.textContent + 'Click ';
-		}
-		
-		document.getElementById('btnClickMe').onclick = function(e) {
-			lobbySocket.send('');
 		}
 	</script>
 </body>
