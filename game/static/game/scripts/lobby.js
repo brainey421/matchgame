@@ -7,13 +7,7 @@ function onWindowLoaded()
 {
 	partyID = JSON.parse(document.getElementById('partyID').textContent);
 	
-	lobbySocket = new WebSocket(
-		'ws://'
-		+ window.location.host
-		+ '/ws/lobby/'
-		+ partyID
-		+ '/'
-	);
+	lobbySocket = new WebSocket('ws://' + window.location.host + '/ws/lobby/' + partyID + '/');
 	
 	lobbySocket.onopen = onLobbySocketOpened;
 	lobbySocket.onmessage = onLobbySocketMessage;
