@@ -20,12 +20,12 @@ class LobbyConsumer(WebsocketConsumer):
         async_to_sync(self.channel_layer.group_send)(
             self.party_id,
             {
-                'type': 'button_clicked',
+                'type': 'send_to_party',
                 'message': ''
             }
         )
     
-    def button_clicked(self, event):
+    def send_to_party(self, event):
         self.send(text_data=json.dumps({
             'message': ''
         }))
