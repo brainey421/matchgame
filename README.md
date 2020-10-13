@@ -10,6 +10,10 @@
 ## How to Run
 
 ```
+$ docker run -p 6379:6379 -d redis:5
+```
+
+```
 $ python3 manage.py runserver
 Watching for file changes with StatReloader
 Performing system checks...
